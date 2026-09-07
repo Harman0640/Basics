@@ -16,6 +16,9 @@ class GreetTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Name cannot be empty"):
             greet("   ")
 
+    def test_greet_can_shout(self) -> None:
+        self.assertEqual(greet("Ada", shout=True), "HELLO, ADA!")
+
 
 if __name__ == "__main__":
     unittest.main()
